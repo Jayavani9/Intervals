@@ -30,3 +30,20 @@ Explanation: The ranges are:
 [2,4] --> "2->4"
 [6,6] --> "6"
 [8,9] --> "8->9"
+
+
+class Solution {
+    public List<String> summaryRanges(int[] nums) {
+            List<String> ans = new ArrayList<>();
+            for(int i = 0 ; i < nums.length;i++)
+            {
+                int n = nums[i];
+                while(i+1 < nums.length && nums[i] + 1 == nums[i+1]) i++;
+                if(n != nums[i]) ans.add(""+n+"->"+nums[i]);
+                else ans.add(""+n);
+            }
+            return ans;
+
+     
+    }
+}
