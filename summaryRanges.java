@@ -34,6 +34,7 @@ Explanation: The ranges are:
 
 class Solution {
     public List<String> summaryRanges(int[] nums) {
+            //Tc: O(n) and Sc: O(1)
             List<String> ans = new ArrayList<>();
             for(int i = 0 ; i < nums.length;i++)
             {
